@@ -1,0 +1,46 @@
+{
+    "count": 1, 
+    "data": [
+      {
+        "app_temp": 30.2, 
+        "aqi": 61, 
+        "city_name": "Raleigh", 
+        "clouds": 45, 
+        "country_code": "US", 
+        "datetime": "2022-05-02:20", 
+        "dewpt": 19.5, 
+        "dhi": 99.53, 
+        "dni": 811.61, 
+        "elev_angle": 35.69, 
+        "ghi": 566.64, 
+        "h_angle": 38.6, 
+        "lat": 35.78, 
+        "lon": -78.64, 
+        "ob_time": "2022-05-02 20:40", 
+        "pod": "d", 
+        "precip": 0, 
+        "pres": 1002.1, 
+        "rh": 58, 
+        "slp": 1013.9, 
+        "snow": 0, 
+        "solar_rad": 536.6, 
+        "state_code": "NC", 
+        "station": "1327W", 
+        "sunrise": "10:20", 
+        "sunset": "00:02", 
+        "temp": 28.6, 
+        "timezone": "America/New_York", 
+        "ts": 1651524000, 
+        "uv": 2.76604, 
+        "vis": 10, 
+        "weather": {
+          "code": 802, 
+          "description": "Scattered clouds", 
+          "icon": "c02d"
+        }, 
+        "wind_cdir": "W", 
+        "wind_cdir_full": "west", 
+        "wind_dir": 267, 
+        "wind_spd": 1.79
+      }
+    ]

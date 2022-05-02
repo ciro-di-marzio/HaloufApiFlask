@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Weather in {{ city }}</title>
+    </head>
+    <body>
+        <h1>Weather in {{ city }}</h1>
+        <h3>The current temperature is {{ content["app_temp"] }}°C</h3>
+        <h3>The current wind speed is {{ content["country_code"] }}</h3>
+        <h3>The current date is {{ content["ob_time"] }}</h3>
+        <h3>The current humidity is {{ content["rh"] }}%</h3>
+        <h3>The current pressure is {{ content["pres"] }} mb</h3>
+        <h3>The current UV index is {{ content["uv"] }}</h3>
+        <h3>The current visibility is {{ content["vis"] }} km</h3>
+        <h3>The current cloudiness is {{ content["clouds"] }}%</h3>
+        <h3>The current precipitation is {{ content["precip"] }}%</h3>
+        <h3>The current dew point is {{ content["dewpt"] }}°C</h3>
+        <h3>The current wind direction is {{ content["wind_dir"] }}</h3>
+        <h3>The current sunrise is {{ content["sunrise"] }}</h3>
+        <h3>The current sunset is {{ content["sunset"] }}</h3>
+        
+    </body>
+</html>

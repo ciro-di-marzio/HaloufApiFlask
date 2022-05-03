@@ -42,6 +42,7 @@ app = Flask(__name__)
 ```
 
 - Step 2: créer une route /api/meteo pour afficher "Hello World"
+> localhost:5000/api/meteo
 
 - Step 3: créer un compte sur "https://www.weatherbit.io/" pour avoir une API Key pour pouvoir avec access a l'API du site. Puis stocker cette API Key dans une variable global.
 
@@ -50,7 +51,7 @@ app = Flask(__name__)
 https://api.weatherbit.io/v2.0/current?lat=48.85&lon=2.35&key=<API_KEY>
 ```
 
-- Step 5: créer un dossier "templates" et un fichier "index.html" dans le dossier "templates"
+- Step 5: créer un dossier "templates" et un fichier "meteo.html" dans le dossier "templates"
 ```html
 <!DOCTYPE html>
 <html>
@@ -182,13 +183,26 @@ def get_info(name):
 ````
 
 - Step 9: créer une route /api/meteo/\<ville\>/\<info\> pour afficher les données météo specific de la ville indiquée. importez get_info dans le main.py.
-```text
-Example: /api/meteo/Naples/clouds
-```
-
+> Example: /api/meteo/Naples/clouds
 ```python
 from locations import get_locations, get_info
 ```
+
+- Step 10: créer un fichier info.html dans templates et ajoutez les éléments ci dessous. Puis faite en sorte de le display avec l'HTML.
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{city}}</title>
+    </head>
+    <body>
+        <h1>Info in {{ city }}</h1>
+        <h3>{{data[0]}} : {{content}} {{data[1]}}</h3>
+    </body>
+</html>
+````
 
 # Completato
 

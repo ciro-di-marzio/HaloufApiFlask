@@ -45,20 +45,17 @@ def meteo2():
 def meteo_city(city):
     content = get_weather(city)
     if content:
-        # return jsonify(content)
-        print(content['data'])
         return render_template('meteo.html', content=content['data'][0], city=city)
     else:
         return jsonify({
             'status': 'City not found',
             'message': 'La requête à l\'API météo n\'a pas fonctionné.' 
-        })
+    }), 404
 
 @app.route('/api/meteo/<city>/<info>')
 def meteo_info(city, info):
     content = get_weather(city)
     if content:
-        # return jsonify(content)
         try:
             data = get_info(str(info))
             return render_template('info.html', content=content['data'][0][str(info)], city=city, data=data)

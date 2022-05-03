@@ -18,7 +18,7 @@ python3 -m venv Flask_workshop
 source Flask_workshop/bin/activate
 ```
 
-- Installer le freamwork flask
+- Installer le framework flask
 ```shell
 pip install Flask
 ```
@@ -32,7 +32,7 @@ flask run
 
 ## Steps
 
-- Step 1: Créer le fichier main.py et import ces élements
+- ***Step 1***: Créer le fichier main.py et import ces élements
 ```python
 from flask import Flask, render_template, request, redirect, session, url_for, sessions, jsonify
 import json
@@ -41,17 +41,17 @@ import requests
 app = Flask(__name__)
 ```
 
-- Step 2: créer une route /api/meteo pour afficher "Hello World"
+- ***Step 2***: créer une route /api/meteo pour afficher "Hello World"
 > localhost:5000/api/meteo
 
-- Step 3: créer un compte sur "https://www.weatherbit.io/" pour avoir une API Key pour pouvoir avec access a l'API du site. Puis stocker cette API Key dans une variable global.
+- ***Step 3***: créer un compte sur "https://www.weatherbit.io/" pour avoir une API Key pour pouvoir avec access a l'API du site. Puis stocker cette API Key dans une variable global.
 
-- Step 4: avec la route /api/meteo displayez les données de l'api du site.
+- ***Step 4***: avec la route /api/meteo displayez les données de l'api du site.
 ```https
 https://api.weatherbit.io/v2.0/current?lat=48.85&lon=2.35&key=<API_KEY>
 ```
 
-- Step 5: créer un dossier "templates" et un fichier "meteo.html" dans le dossier "templates"
+- ***Step 5***: créer un dossier "templates" et un fichier "meteo.html" dans le dossier "templates"
 ```html
 <!DOCTYPE html>
 <html>
@@ -80,7 +80,7 @@ https://api.weatherbit.io/v2.0/current?lat=48.85&lon=2.35&key=<API_KEY>
 </html>
 ````
 
-- Step 6: créer un ficher python "locations.py" et ajoutez les éléments ci dessous.
+- ***Step 6***: créer un ficher python "locations.py" et ajoutez les éléments ci dessous.
 ```python
 location = {
         'Paris': [48.8566, 2.3522],
@@ -127,12 +127,12 @@ def get_locations(name):
         return None
 ```
 
-- Step 7: créer une route /api/meteo/\<ville\> pour afficher les données météo de la ville indiquée. importez locations dans le main.py.
+- ***Step 7***: créer une route /api/meteo/\<ville\> pour afficher les données météo de la ville indiquée. importez locations dans le main.py.
 ```python
 from locations import get_locations
 ```
 
-- Step 8: dans le locations.py ajoutez les éléments ci dessous.
+- ***Step 8***: dans le locations.py ajoutez les éléments ci dessous.
 ```python
 key = {
         'app_temp': ["Apparent Temperature", "°C"],
@@ -182,13 +182,13 @@ def get_info(name):
         return None
 ````
 
-- Step 9: créer une route /api/meteo/\<ville\>/\<info\> pour afficher les données météo specific de la ville indiquée. importez get_info dans le main.py.
+- ***Step 9***: créer une route /api/meteo/\<ville\>/\<info\> pour afficher les données météo specific de la ville indiquée. importez get_info dans le main.py.
 > Example: /api/meteo/Naples/clouds
 ```python
 from locations import get_locations, get_info
 ```
 
-- Step 10: créer un fichier info.html dans templates et ajoutez les éléments ci dessous. Puis faite en sorte de le display avec l'HTML.
+- ***Step 10***: créer un fichier info.html dans templates et ajoutez les éléments ci dessous. Puis faite en sorte de le display avec l'HTML.
 ```html
 <!DOCTYPE html>
 <html>
